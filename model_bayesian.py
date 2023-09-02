@@ -9,7 +9,7 @@ from priors import cmes, priors
 azr = AZR('model_1.azr')
 azr.ext_capture_file = 'output/intEC.dat'
 azr.root_directory = '/tmp/'
-azr.command = '/Applications/AZURE2.app/Contents/MacOS/AZURE2'
+# azr.command = '/Applications/AZURE2.app/Contents/MacOS/AZURE2'
 
 dy_no_norm = np.loadtxt('bare_uncertainties.txt')
 
@@ -34,7 +34,7 @@ def ln_likelihood(theta):
     y = np.hstack((
         scatter[:, 5],
         capture_ground[:, 5],
-        capture_total[:, 6]
+        capture_total[:, 5]
     ))
     dy = np.hstack((
         scatter[:, 6],
