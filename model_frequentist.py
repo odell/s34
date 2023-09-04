@@ -6,7 +6,7 @@ import numpy as np
 from brick import AZR
 from priors import cmes
 
-azr = AZR('model.azr')
+azr = AZR('model_1.azr')
 azr.ext_capture_file = 'output/intEC.dat'
 azr.root_directory = '/tmp/'
 
@@ -32,7 +32,7 @@ def chi_squared(theta):
     y = np.hstack((
         scatter[:, 5],
         capture_ground[:, 5],
-        capture_total[:, 6]
+        capture_total[:, 5]
     ))
     dy = np.hstack((
         scatter[:, 6],
