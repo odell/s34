@@ -9,7 +9,7 @@ from priors import cmes, priors
 azr = AZR('model_1.azr')
 azr.ext_capture_file = 'output/intEC.dat'
 azr.root_directory = '/tmp/'
-# azr.command = '/Applications/AZURE2.app/Contents/MacOS/AZURE2'
+azr.command = '/Applications/AZURE2.app/Contents/MacOS/AZURE2'
 
 dy_no_norm = np.loadtxt('bare_uncertainties.txt')
 
